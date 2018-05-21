@@ -7,30 +7,19 @@ public class WalkerAnimal implements CanEat, CanSleep, CanWalk, HasName {
     	SetName(name);
     }
 
-    public void PrintAbilities() {
-		System.out.println("The abilities of " + this.name + " are:");
-    	System.out.println("The animal can eat   ->" + Eat());
-        System.out.println("The animal can sleep ->" + Sleep());
-        System.out.println("The animal can walk  ->" + Walk());
+	@Override
+	public void Walk() {
+		System.out.println(this.GetName() + " can walk");
 	}
 
 	@Override
-	public boolean Walk() {
-		// TODO Auto-generated method stub
-		return true;
+	public void Sleep() {
+		System.out.println(this.GetName() + " can sleep");
 	}
 
 	@Override
-	public boolean Sleep() {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-	@Override
-	public boolean Eat() {
-		// TODO Auto-generated method stub
-		return true;
-		
+	public void Eat() {
+		System.out.println(this.GetName() + " can eat");
 	}
 	public void SetName(String name) {
 		this.name = name;

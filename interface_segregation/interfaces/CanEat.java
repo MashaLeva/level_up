@@ -1,5 +1,5 @@
 package interfaces;
 
 public interface CanEat{
-    boolean Eat();
+    void Eat();
 }
